@@ -1,12 +1,13 @@
 {
   "name": "mask-flags",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "flags implemented using bitmask for simple and efficient storage",
   "main": "index.js",
   "scripts": {
     "test": "jest",
     "cov": "jest --coverage",
-    "compile": "tsc --project ./tsconfig.json"
+    "compile": "tsc --project ./tsconfig.json",
+    "prepublishOnly": "rm -rf ./dist && npm run compile"
   },
   "author": "paradite",
   "license": "MIT",
