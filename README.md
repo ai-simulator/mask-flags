@@ -3,7 +3,7 @@
 JavaScript flags implemented using bitmask for simple and efficient storage.
 
 [![NPM version](https://img.shields.io/npm/v/mask-flags.svg?style=flat-square)](https://npmjs.org/package/mask-flags)
-[![example workflow](https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/node.js.yml/badge.svg)](https://github.com/paradite/mask-flags/actions/workflows/node.js.yml)
+[![CI](https://github.com/paradite/mask-flags/actions/workflows/node.js.yml/badge.svg)](https://github.com/paradite/mask-flags/actions/workflows/node.js.yml)
 
 ## Install:
 
