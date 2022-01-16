@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest",
     "cov": "jest --coverage",
+    "ci": "jest --coverage",
     "compile": "tsc --project ./tsconfig.json",
     "prepublishOnly": "rm -rf ./dist && npm run compile"
   },
