@@ -18,9 +18,14 @@ Set, get and clear:
 import { MaskFlags } from 'mask-flags';
 
 const maskFlags = new MaskFlags(10);
+// default flag false
 maskFlags.getPos(0); // false
+
+// set
 maskFlags.setPos(0);
 maskFlags.getPos(0); // true
+
+// clear
 maskFlags.clearPos(0);
 maskFlags.getPos(0); // false
 ```
@@ -33,8 +38,10 @@ import { MaskFlags } from 'mask-flags';
 const maskFlags = new MaskFlags(10);
 maskFlags.setPos(0);
 maskFlags.setPos(5);
+
 // save data
 const data = maskFlags.getData(); // 33
+
 // load data
 const maskFlags2 = MaskFlags.fromData(data, 10);
 maskFlags2.getPos(0); // true

@@ -1,7 +1,7 @@
 {
   "name": "mask-flags",
   "version": "1.0.3",
-  "description": "flags implemented using bitmask for simple and efficient storage",
+  "description": "JavaScript flags implemented using bitmask for simple and efficient storage",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest",
