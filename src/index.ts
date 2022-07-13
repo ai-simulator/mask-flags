@@ -1,6 +1,8 @@
+import { NumericArrayInteger } from 'numeric-array-integer';
+
 export class MaskFlags {
-  private length: number;
-  private data: number;
+  private integer: NumericArrayInteger;
+  static BIT_LENGTH = 1;
   static DEFAULT_LENGTH = 31;
 
   constructor(length?: number) {
@@ -8,50 +10,37 @@ export class MaskFlags {
     if (2 ** length >= Number.MAX_SAFE_INTEGER) {
       throw new Error('Length exceeds limit for safe integer');
     }
-    this.length = length;
-    this.data = 0;
+    this.integer = new NumericArrayInteger(MaskFlags.BIT_LENGTH, length);
   }
 
   loadData(data: number) {
-    this.data = data;
+    this.integer.loadData(data);
   }
 
   static fromData(data: number, length?: number) {
     length = length || MaskFlags.DEFAULT_LENGTH;
-    const maskFlags = new MaskFlags(length);
-    maskFlags.loadData(data);
-    return maskFlags;
+    const newMaskFlags = new MaskFlags(length);
+    newMaskFlags.loadData(data);
+    return newMaskFlags;
   }
 
   getData() {
-    return this.data;
+    return this.integer.getData();
   }
 
   getLength() {
-    return this.length;
+    return this.integer.getArrayLength();
   }
 
   setPos(position: number) {
-    if (position > this.length) {
-      throw new Error('Position exceeds length');
-    }
-    const mask = 1 << position;
-    this.data |= mask;
+    this.integer.setPos(position, 1);
   }
 
   clearPos(position: number) {
-    if (position > this.length) {
-      throw new Error('Position exceeds length');
-    }
-    const mask = 1 << position;
-    this.data &= ~mask;
+    this.integer.clearPos(position);
   }
 
   getPos(position: number) {
-    if (position > this.length) {
-      throw new Error('Position exceeds length');
-    }
-    const mask = 1 << position;
-    return (this.data & mask) === 0 ? false : true;
+    return this.integer.getPos(position) ? true : false;
   }
 }

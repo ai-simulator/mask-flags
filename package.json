@@ -1,10 +1,11 @@
 {
   "name": "mask-flags",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "JavaScript flags implemented using bitmask for simple and efficient storage",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest",
+    "watch": "jest --watch",
     "cov": "jest --coverage",
     "ci": "jest --coverage",
     "compile": "tsc --project ./tsconfig.json",
@@ -28,6 +29,12 @@
       "lcov",
       "text",
       "text-summary"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/mask-flags"
     ]
+  },
+  "dependencies": {
+    "numeric-array-integer": "^1.0.3"
   }
 }
