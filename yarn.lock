@@ -3016,10 +3016,10 @@ npm-run-path@^4.0.1:
   dependencies:
     path-key "^3.0.0"
 
-numeric-array-integer@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/numeric-array-integer/-/numeric-array-integer-3.0.0.tgz#13246386d208ba62bee9c934e27c2428695cb380"
-  integrity sha512-JVH4PL7hosx5BkmS9h0tu463lTMJRrmGe0fULAqROxDvnTfEH3Pjj1GQ4gFZY84f9TXAC7f1bffaAyc9qGYi7A==
+numeric-array-integer@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/numeric-array-integer/-/numeric-array-integer-3.1.0.tgz#488dd578d5171cb9241006c48c4e855dcfbd663d"
+  integrity sha512-6y85gb7Z2MMWZKX+2F6Uc29zV4AQBMoVH3r8YdJODmRkGh1/pAGKqkTA8F26+L/IoABcDhatHHC0hKxE+dHS8w==
 
 nwsapi@^2.2.0:
   version "2.2.0"

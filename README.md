@@ -2,7 +2,7 @@
 
 JavaScript flags implemented using bitmask for simple and efficient storage.
 
-Version 2.x uses [numeric-array-integer](https://github.com/paradite/numeric-array-integer) to implement the flags, while maintaining backwards compatibility with the version 1.x.
+Version 2.x and 3.x uses [numeric-array-integer](https://github.com/paradite/numeric-array-integer) to implement the flags, while maintaining backwards compatibility with the version 1.x.
 
 [![NPM version](https://img.shields.io/npm/v/mask-flags.svg?style=flat-square)](https://npmjs.org/package/mask-flags)
 [![CI](https://github.com/paradite/mask-flags/actions/workflows/node.js.yml/badge.svg)](https://github.com/paradite/mask-flags/actions/workflows/node.js.yml)
@@ -20,15 +20,17 @@ Set, get and clear:
 ```js
 import { MaskFlags } from 'mask-flags';
 
+// Initialize a new MaskFlags with length 10 (capable of storing 10 flags)
 const maskFlags = new MaskFlags(10);
-// default flag false
+
+// Default flag value is false
 maskFlags.getPos(0); // false
 
-// set
+// Set flag at position to true
 maskFlags.setPos(0);
 maskFlags.getPos(0); // true
 
-// clear
+// Clear flag at position to false
 maskFlags.clearPos(0);
 maskFlags.getPos(0); // false
 ```
@@ -42,10 +44,10 @@ const maskFlags = new MaskFlags(10);
 maskFlags.setPos(0);
 maskFlags.setPos(5);
 
-// save data
+// Get data as an integer
 const data = maskFlags.getData(); // 33
 
-// load data
+// Load data from an integer
 const maskFlags2 = MaskFlags.fromData(data, 10);
 maskFlags2.getPos(0); // true
 maskFlags2.getPos(5); // true
